@@ -1,0 +1,115 @@
+:root {
+    --bgfileitem: #52525222;
+}
+
+#screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#file-explorer {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar.dark-mode {
+    width: 250px;
+    background-color: #393939;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.sidebar.light-mode {
+    width: 250px;
+    background-color: #ececec;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar i {
+    margin-right: 8px;
+}
+
+.main.dark-mode {
+    flex: 1;
+    padding: 10px;
+    background-color: #585858;
+}
+
+.main.lght-mode {
+    flex: 1;
+    padding: 10px;
+    background-color: #ececec;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-list {
+    margin-top: 10px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    background-color: var(--bgfileitem);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.file-item:hover {
+    background-color: lighten(var(--bgfileitem), 20%);
+}
+
+#taskbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #ececec;
+    border-top: 1px solid #ccc;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode button {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}

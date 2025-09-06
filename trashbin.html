@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>desktop *** cetraOS</title> 
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/trashbin.css">
+    <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="screen">
+        <div id="file-explorer">
+            <div class="sidebar">
+                <ul>
+                    <li><i class="fas fa-folder"></i> Documents</li>
+                    <li><i class="fas fa-folder"></i> Pictures</li>
+                    <li><i class="fas fa-folder"></i> Music</li>
+                    <li><i class="fas fa-folder"></i> Videos</li>
+                    <li><i class="fas fa-trash"></i> Trash</li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="toolbar">
+                    <button><i class="fas fa-arrow-left"></i></button>
+                    <button><i class="fas fa-arrow-right"></i></button>
+                    <button><i class="fas fa-sync"></i></button>
+                    <span>Current Folder: Trash</span>
+                </div>
+                <div class="file-list">
+                    <div class="file-item">
+                        <i class="fas fa-file"></i>
+                        <span>deleted_file1.txt</span>
+                    </div>
+                    <div class="file-item">
+                        <i class="fas fa-file"></i>
+                        <span>old_photo.jpg</span>
+                    </div>
+                    <div class="file-item">
+                        <i class="fas fa-file"></i>
+                        <span>music.mp3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="taskbar">
+            <button id="theme-toggle"></button>
+        </div>
+    </div>
+    <script src="js/general.js"></script>
+</body>
+</html>
