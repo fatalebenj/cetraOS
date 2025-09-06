@@ -13,10 +13,10 @@
     border-width: 1.5px 0 0 0;
     border-color: #6d6d6d;
     font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-#taskbar.darktheme {
+#taskbar.dark-mode {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -33,26 +33,14 @@
     color: white;
 }
 
-body {
-    background-image: url('../images/bg_light.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-image 0.3s, color 0.3s;
-}
 
-body.darktheme {
-    background-image: url('../images/bg_dark.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-body.darktheme #theme-toggle{
+body.dark-mode #theme-toggle{
     background: linear-gradient(90deg, #f5f6fa 30%, #dcdde1 70%);
     color: #2f2f2f;
 }
 
-#theme-toggle {
+
+#theme-toggle.light-mode {
     cursor: pointer;
     padding: 0.5em 1.2em;
     border: none;
@@ -62,7 +50,7 @@ body.darktheme #theme-toggle{
     font-weight: 500;
     font-size: 1em;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.2s, color 0.2s;
     margin-left: auto;
     margin-right: 10px;
 }
@@ -72,26 +60,3 @@ body.darktheme #theme-toggle{
     transform: scale(1.03);
 }
 
-#desktop {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-}
-
-.shortcut {
-    color: white;
-    text-decoration: none;
-    text-transform: lowercase;
-}
-
-a.shortcut p{
-    width: 30px;
-    box-shadow: 0 0 2px black;
-    margin: 0px 0px 0px 0px;
-}
-
-a.shortcut:visited {
-    color: white;
-    text-decoration: none;
-    text-transform: lowercase;
-}

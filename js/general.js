@@ -1,18 +1,22 @@
-const toggleButton = document.getElementById("theme-toggle");
-const body = document.body;
-let darkMode = false;
+const toggleButton = document.getElementById('theme-toggle');
+const taskbar = document.getElementById('taskbar');
 
-toggleButton.addEventListener("click", () => {
-    darkMode = !darkMode
-    body.classList.toggle("darktheme");
-    document.getElementById("taskbar").classList.toggle("darktheme");
-    toggleButton.classList.toggle("darktheme");
+// Load saved theme from localStorage
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.body.classList.add(savedTheme + '-mode');
+toggleButton.textContent = savedTheme === 'dark' ? '🌙' : '🌞';
 
-    if (darkMode == true){
-        toggleButton.innerHTML === '<i class="fa-light fa-moon"></i>';
-    }
-    else {
-        toggleButton.innerHTML === '<i class="fa-light fa-sun"></i>';
-    }
-
-})
+// Toggle theme on button click
+toggleButton.addEventListener('click', () => {
+  if (document.body.classList.contains('dark-mode')) {
+    taskbar.classList.replace('dark-mode', 'light-mode');
+    document.body.classList.replace('dark-mode', 'light-mode');
+    toggleButton.textContent = '🌞';
+    localStorage.setItem('theme', 'light');
+  } else {
+    taskbar.classList.replace('light-mode', 'dark-mode');
+    document.body.classList.replace('light-mode', 'dark-mode');
+    toggleButton.textContent = '🌙';
+    localStorage.setItem('theme', 'dark');
+  }
+});
