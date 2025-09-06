@@ -1,3 +1,12 @@
+html {
+    cursor: url('../images/light.cur'), default;
+}
+
+html.darktheme {
+    cursor: url('../images/dark.cur'), default;
+}
+
+
 #taskbar {
     position: fixed;
     bottom: 0;
@@ -7,9 +16,25 @@
     display: flex;
     align-items: center;
     z-index: 1000;
-   /* background-color: #393939;*/
     border-style: solid;
     background-color: #ececec;
+    border-width: 1.5px 0 0 0;
+    border-color: #6d6d6d;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#taskbar.darktheme {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+   background-color: #393939;
+    border-style: solid;
     border-width: 1.5px 0 0 0;
     border-color: #6d6d6d;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,5 +45,38 @@ body {
     background-image: url('../images/bg_light.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 0.3s, color 0.3s;
 }
 
+body.darktheme {
+    background-image: url('../images/bg_dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: url('../images/dark.cur'), default;
+}
+
+
+body.darktheme #theme-toggle{
+    background: linear-gradient(90deg, #f5f6fa 30%, #dcdde1 70%);
+    color: #2f2f2f;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    padding: 0.5em 1.2em;
+    border: none;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #23272f 30%, #353b48 70%);
+    color: #f5f6fa;
+    font-weight: 500;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.3s, color 0.3s;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+    
+#theme-toggle:hover {
+    transform: scale(1.03);
+}
