@@ -34,7 +34,7 @@ body.dark-mode #taskbar  {
 }
 
 
-body.dark-mode #theme-toggle {
+body.light-mode #theme-toggle {
      cursor: pointer;
     padding: 0.5em 1.2em;
     border: none;
@@ -44,13 +44,13 @@ body.dark-mode #theme-toggle {
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: background 0.2s, color 0.2s;
     margin-left: auto;
-    margin-right: 10px;
-    background: linear-gradient(90deg, #f5f6fa 30%, #dcdde1 70%);
+    margin-right: 20px;
+    background: linear-gradient(90deg, #cac7bd 30%, #e1e1dc 70%);
     color: #2f2f2f;
 }
 
 
-body.light-mode #theme-toggle {
+body.dark-mode #theme-toggle {
     cursor: pointer;
     padding: 0.5em 1.2em;
     border: none;
@@ -62,7 +62,7 @@ body.light-mode #theme-toggle {
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: background 0.2s, color 0.2s;
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
     
@@ -70,3 +70,13 @@ body.light-mode #theme-toggle {
     transform: scale(1.03);
 }
 
+body.light-mode #desktopbutton {
+    cursor: pointer;
+    height: 50px;
+    width: 12px;
+    border: none;
+    background: linear-gradient(0deg, #ccccd2 30%, #dcdde1 70%);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-left: auto;
+    outline: none;
+}
