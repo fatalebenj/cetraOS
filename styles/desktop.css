@@ -1,12 +1,12 @@
 body.light-mode {
-    background-image: url('../images/bg_light.jpeg');
+    background-image: url('../assets/bg_light.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     transition: background-image 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-    background-image: url('../images/bg_dark.jpg');
+    background-image: url('../assets/bg_dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

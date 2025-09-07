@@ -7,19 +7,19 @@ toggleButton.appendChild(toggleButtonIcon);
 // Load saved theme from localStorage
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.body.classList.add(savedTheme + '-mode');
-toggleButtonIcon.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+toggleButtonIcon.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-earth-americas"></i>' : '<i class="fa-solid fa-cloud"></i>';
 
 // Toggle theme on button click
 toggleButton.addEventListener('click', () => {
   if (document.body.classList.contains('dark-mode')) {
     taskbar.classList.replace('dark-mode', 'light-mode');
     document.body.classList.replace('dark-mode', 'light-mode');
-    toggleButtonIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    toggleButtonIcon.innerHTML = '<i class="fa-solid fa-cloud"></i>';
     localStorage.setItem('theme', 'light');
   } else {
     taskbar.classList.replace('light-mode', 'dark-mode');
     document.body.classList.replace('light-mode', 'dark-mode');
-    toggleButtonIcon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    toggleButtonIcon.innerHTML = '<i class="fa-solid fa-earth-americas"></i>';
     localStorage.setItem('theme', 'dark');
   }
 });

@@ -54,9 +54,19 @@ body.light-mode .sidebar{
     border-radius: 5px;
 }
 
+
 .sidebar li:hover {
     background-color: #6f6f6f39;
 }
+
+.sidebar li#current {
+    background-color: #b8b8b83a;
+}
+
+.sidebar li#current:hover {
+    border: 1px solid #a2b6a7;
+}
+
 
 .sidebar i {
     margin-right: 8px;
