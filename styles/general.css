@@ -50,7 +50,7 @@ body.dark-mode #taskbar {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: auto;
-    margin-right: 14px;
+    margin-right: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -59,8 +59,8 @@ body.light-mode #theme-toggle {
     background: linear-gradient(135deg, 
         rgba(255, 182, 193, 0.9) 0%, 
         rgba(240, 98, 146, 0.8) 100%);
-    color: #8c1414;;
-    border: 2px solid rgba(240, 98, 146, 0.3);
+    color: #8c1414;
+    border: 1px solid rgba(240, 98, 146, 0.3);
 }
 
 body.dark-mode #theme-toggle {
@@ -68,7 +68,7 @@ body.dark-mode #theme-toggle {
         rgba(63, 81, 181, 0.9) 0%, 
         rgba(26, 35, 126, 0.8) 100%);
     color: #e8eaf6;
-    border: 2px solid rgba(63, 81, 181, 0.3);
+    border: 1px solid rgba(63, 81, 181, 0.3);
 }
 
 #theme-toggle:hover {
@@ -149,5 +149,5 @@ body.dark-mode span#greeting {
 }
 
 #clock {
-    margin-right: 6px;
+    margin-right: 10px;
 }

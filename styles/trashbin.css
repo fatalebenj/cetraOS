@@ -23,24 +23,30 @@ fileexplorer {  /* wrapper for sidebar + main */
     flex: 1;
 }
 
+
 .sidebar {
-    width: 250px;
-    border-right: 1px solid #ccc;
-    padding: 10px;
-    transition: background-color 0.3s, color 0.3s;
+    width: 200px;
+    border-right: 2px solid;
+    padding: 5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode .sidebar {
+    background: linear-gradient(180deg, 
+        rgba(252, 228, 236, 0.95) 0%, 
+        rgba(255, 218, 224, 0.9) 100%);
+    border-right-color: #f06292;
+    color: #4a148c;
 }
 
 body.dark-mode .sidebar {
-    background-color: #212339;
-    color: #e3f2fd;
+    background: linear-gradient(180deg, 
+        rgba(38, 43, 93, 0.95) 0%, 
+        rgb(33, 35, 57) 100%);
+    border-right-color: #3f51b5;
+    color: #e8eaf6;
 }
-
-body.light-mode .sidebar{
-    background-color: #fce4ec;
-    color: #ad1457;
-}
-
-
 
 .sidebar ul {
     list-style-type: none;
@@ -48,29 +54,61 @@ body.light-mode .sidebar{
 }
 
 .sidebar li {
-    margin: 10px 0;
-    padding: 10px 0px 10px 5px;
+    margin: 8px 5px;
+    padding: 5px;
     display: flex;
     align-items: center;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 170px;
 }
 
-
 .sidebar li:hover {
-    background-color: #6f6f6f39;
+    transform: translateX(5px);
+    backdrop-filter: blur(15px);
+}
+
+body.light-mode .sidebar li:hover {
+    background: rgba(240, 98, 146, 0.2);
+    box-shadow: 0 2px 10px rgba(240, 98, 146, 0.1);
+}
+
+body.dark-mode .sidebar li:hover {
+    background: rgba(63, 81, 181, 0.3);
+    box-shadow: 0 2px 10px rgba(63, 81, 181, 0.2);
 }
 
 .sidebar li#current {
-    background-color: #b8b8b83a;
+    transform: translateX(8px);
+    backdrop-filter: blur(15px);
 }
 
-.sidebar li#current:hover {
-    border: 1px solid #a2b6a7;
+body.light-mode .sidebar li#current {
+    background: rgba(240, 98, 146, 0.3);
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.15);
 }
 
+body.dark-mode .sidebar li#current {
+    background: rgba(63, 81, 181, 0.4);
+    box-shadow: 0 4px 15px rgba(63, 81, 181, 0.25);
+}
+
+body.light-mode .sidebar li#current:hover {
+    border: 2px solid #f06292;
+}
+
+body.dark-mode .sidebar li#current:hover {
+    border: 2px solid #3f51b5;
+}
 
 .sidebar i {
-    margin-right: 8px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar li:hover i {
+    transform: scale(1.1);
 }
 
 .main{
