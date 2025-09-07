@@ -133,8 +133,8 @@ body.dark-mode span#name {
 }
 
 span#greeting {
-    font-size: 20px;
-    font-family: "FinalFantasy";
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: auto;
     margin-left: 5px;
     text-shadow: 0 1px 5px rgba(0,0,0,0.1);

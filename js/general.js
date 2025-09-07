@@ -34,21 +34,37 @@ function startTime() {
 }
 
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i}; 
   return i;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  let username = localStorage.getItem("username");
+  const setupScreen = document.getElementById("setup-screen");
+  const saveBtn = document.getElementById("save-username");
+  const greetEl = document.getElementById("greeting");
 
-  if (!username) {
-    username = prompt("Welcome to cetraOS! What's your name?");
-    if (username && username.trim() !== "") {
-      localStorage.setItem("username", username);
-    }
+  // Try to load saved username
+  let savedName = localStorage.getItem("username");
+
+  if (savedName) {
+    showGreeting(savedName);
+  } else {
+    setupScreen.style.display = "flex";
   }
 
-  if (username) {
-    document.getElementById("greeting").textContent = `Hello, ${username}!`;
+  saveBtn.addEventListener("click", () => {
+    const input = document.getElementById("username-input").value.trim();
+    if (input.length > 0) {
+      localStorage.setItem("username", input);
+      savedName = input;
+      setupScreen.style.display = "none";
+      showGreeting(savedName);
+    }
+  });
+
+  function showGreeting(name) {
+    if (greetEl) {
+      greetEl.textContent = `Hello, ${name}!`;
+    }
   }
 });
