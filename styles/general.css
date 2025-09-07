@@ -9,11 +9,12 @@ body.light-mode #taskbar {
     align-items: center;
     z-index: 1000;
     border-style: solid;
-    background-color: #ececec;
+    background: linear-gradient(90deg, #66d366 0%, #79fade 100%);
     border-width: 1.5px 0 0 0;
     border-color: #6d6d6d;
     font-family: Arial, Helvetica, sans-serif;
     transition: background-color 0.2s, color 0.2s;
+    padding: 0 0 0 0;
 }
 
 body.dark-mode #taskbar  {
@@ -25,12 +26,13 @@ body.dark-mode #taskbar  {
     display: flex;
     align-items: center;
     z-index: 1000;
-   background-color: #393939;
+    background: linear-gradient(90deg, #3a4d3b 0%, #225c22 100%);
     border-style: solid;
     border-width: 1.5px 0 0 0;
     border-color: #6d6d6d;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    padding: 0 0 0 0;
 }
 
 
@@ -45,8 +47,8 @@ body.light-mode #theme-toggle {
     transition: background 0.2s, color 0.2s;
     margin-left: auto;
     margin-right: 20px;
-    background: linear-gradient(90deg, #cac7bd 30%, #e1e1dc 70%);
-    color: #2f2f2f;
+    background: linear-gradient(0deg, rgba(79, 179, 88, 0.5) 30%, rgba(114, 234, 138, 0.5) 70%);
+    color: #0c3a11;
 }
 
 
@@ -55,7 +57,7 @@ body.dark-mode #theme-toggle {
     padding: 0.5em 1.2em;
     border: none;
     border-radius: 24px;
-    background: linear-gradient(90deg, #23272f 30%, #353b48 70%);
+    background: linear-gradient(0deg, rgba(40, 40, 42, 0.5) 30%, rgba(48, 49, 50, 0.5) 70%);
     color: #f5f6fa;
     font-weight: 500;
     font-size: 1em;
@@ -75,7 +77,18 @@ body.light-mode #desktopbutton {
     height: 50px;
     width: 12px;
     border: none;
-    background: linear-gradient(0deg, #ccccd2 30%, #dcdde1 70%);
+    background: linear-gradient(0deg, rgba(79, 179, 88, 0.5) 30%, rgba(114, 234, 138, 0.5) 70%);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-left: auto;
+    outline: none;
+}
+
+body.dark-mode #desktopbutton {
+    cursor: pointer;
+    height: 50px;
+    width: 12px;
+    border: none;
+    background: linear-gradient(0deg, rgba(40, 40, 42, 0.5) 30%, rgba(48, 49, 50, 0.5) 70%);
     transition: background 0.2s, color 0.2s, transform 0.2s;
     margin-left: auto;
     outline: none;
