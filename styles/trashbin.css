@@ -23,23 +23,24 @@ fileexplorer {  /* wrapper for sidebar + main */
     flex: 1;
 }
 
-body.dark-mode .sidebar {
+.sidebar {
     width: 250px;
-    background-color: #393939;
     border-right: 1px solid #ccc;
     padding: 10px;
-    color: #ffffff;
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.light-mode .sidebar{
-    width: 250px;
-    background-color: #ececec;
-    border-right: 1px solid #ccc;
-    padding: 10px;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
+body.dark-mode .sidebar {
+    background-color: #212339;
+    color: #e3f2fd;
 }
+
+body.light-mode .sidebar{
+    background-color: #fce4ec;
+    color: #ad1457;
+}
+
+
 
 .sidebar ul {
     list-style-type: none;
@@ -72,20 +73,20 @@ body.light-mode .sidebar{
     margin-right: 8px;
 }
 
-body.dark-mode .main{
+.main{
     flex: 1;
     padding: 10px;
-    background-color: #585858;
-    color: #ffffff;
     transition: background-color 0.3s, color 0.3s;
 }
 
+body.dark-mode .main{
+    background-color: #212339;
+    color: #e3f2fd;
+}
+
 body.light-mode .main{
-    flex: 1;
-    padding: 10px;
-    background-color: #ececec;
-    color: #3c3f3c;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: #fce4ec;
+    color: #ad1457;
 }
 
 .toolbar {

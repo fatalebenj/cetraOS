@@ -34,7 +34,7 @@ body.dark-mode a.shortcut p {
 }
 
 body.light-mode a.shortcut p {
-    text-shadow: 2px 2px 0 #ad1457, 2px -2px 0 #ad1457, -2px 2px 0 #ad1457, -2px -2px 0 #ad1457, 2px 0px 0 #ad1457, -2px 0px 0 #ad1457, 0px -2px 0 #ad1457;
+    text-shadow: 2px 2px 0 #ad1457, 2px -2px 0 #ad1457, -2px 2px 0 #ad1457, -2px -2px 0 #ad1457, 2px 0px 0 #ad1457, 0px 2px 0 #ad1457, -2px 0px 0 #ad1457, 0px -2px 0 #ad1457;
 }
 
 a.shortcut:visited {
