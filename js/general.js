@@ -43,11 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveBtn = document.getElementById("save-username");
   const greetEl = document.getElementById("greeting");
 
-  // Try to load saved username
+  // Try to load saved username - check for both null and empty string
   let savedName = localStorage.getItem("username");
 
-  if (savedName) {
+  if (savedName && savedName.trim() !== "") {
     showGreeting(savedName);
+    setupScreen.style.display = "none"; // Explicitly hide setup screen
   } else {
     setupScreen.style.display = "flex";
   }
@@ -59,6 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
       savedName = input;
       setupScreen.style.display = "none";
       showGreeting(savedName);
+    }
+  });
+
+  // Allow Enter key to save username
+  document.getElementById("username-input").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      saveBtn.click();
     }
   });
 

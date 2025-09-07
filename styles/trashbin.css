@@ -1,4 +1,3 @@
-
 fileexplorer {  /* wrapper for sidebar + main */
     display: flex;
     flex: 1; /* take all space except the taskbar */
@@ -22,7 +21,6 @@ fileexplorer {  /* wrapper for sidebar + main */
     display: flex;
     flex: 1;
 }
-
 
 .sidebar {
     width: 200px;
@@ -59,29 +57,33 @@ body.dark-mode .sidebar {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
     cursor: pointer;
     width: 170px;
+    border: 2px solid transparent;
 }
 
-.sidebar li:hover {
+/* ONLY regular items get the general hover effect */
+.sidebar li:not(#current):hover {
     transform: translateX(5px);
     backdrop-filter: blur(15px);
 }
 
-body.light-mode .sidebar li:hover {
+body.light-mode .sidebar li:not(#current):hover {
     background: rgba(240, 98, 146, 0.2);
     box-shadow: 0 2px 10px rgba(240, 98, 146, 0.1);
 }
 
-body.dark-mode .sidebar li:hover {
+body.dark-mode .sidebar li:not(#current):hover {
     background: rgba(63, 81, 181, 0.3);
     box-shadow: 0 2px 10px rgba(63, 81, 181, 0.2);
 }
 
+/* Current item styling - already "selected" */
 .sidebar li#current {
     transform: translateX(8px);
     backdrop-filter: blur(15px);
+    border: 2px solid transparent;
 }
 
 body.light-mode .sidebar li#current {
@@ -94,6 +96,7 @@ body.dark-mode .sidebar li#current {
     box-shadow: 0 4px 15px rgba(63, 81, 181, 0.25);
 }
 
+/* Current item hover - ONLY add border, keep everything else the same */
 body.light-mode .sidebar li#current:hover {
     border: 2px solid #f06292;
 }
