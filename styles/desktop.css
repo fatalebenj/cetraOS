@@ -2,20 +2,30 @@ body.light-mode {
     background-image: url('../assets/bg_light.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    transition: background-image 0.3s, color 0.3s;
+    background-attachment: fixed;
+    transition: all 0.4s ease;
 }
 
 body.dark-mode {
     background-image: url('../assets/bg_dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    transition: all 0.4s ease;
 }
 
-
 #desktop {
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
+    transition: color 0.3s ease;
+}
+
+body.light-mode #desktop {
+    color: #4a148c;
+}
+
+body.dark-mode #desktop {
+    color: #e8eaf6;
 }
 
 .shortcut {
