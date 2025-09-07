@@ -37,3 +37,18 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  let username = localStorage.getItem("username");
+
+  if (!username) {
+    username = prompt("Welcome to cetraOS! What's your name?");
+    if (username && username.trim() !== "") {
+      localStorage.setItem("username", username);
+    }
+  }
+
+  if (username) {
+    document.getElementById("greeting").textContent = `Hello, ${username}!`;
+  }
+});
