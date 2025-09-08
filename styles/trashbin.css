@@ -57,61 +57,80 @@ body.dark-mode .sidebar {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    transition: transform 0.3s ease, border 0.3s ease;
     cursor: pointer;
     width: 170px;
     border: 2px solid transparent;
 }
 
-/* ONLY regular items get the general hover effect */
+/* Regular items hover - NOT the current one */
 .sidebar li:not(#current):hover {
-    transform: translateX(5px);
-    backdrop-filter: blur(15px);
+    transform: translateX(5px) !important;
+    backdrop-filter: blur(15px) !important;
 }
 
 body.light-mode .sidebar li:not(#current):hover {
-    background: rgba(240, 98, 146, 0.2);
-    box-shadow: 0 2px 10px rgba(240, 98, 146, 0.1);
+    background: rgba(240, 98, 146, 0.2) !important;
+    box-shadow: 0 2px 10px rgba(240, 98, 146, 0.1) !important;
 }
 
 body.dark-mode .sidebar li:not(#current):hover {
-    background: rgba(63, 81, 181, 0.3);
-    box-shadow: 0 2px 10px rgba(63, 81, 181, 0.2);
+    background: rgba(63, 81, 181, 0.3) !important;
+    box-shadow: 0 2px 10px rgba(63, 81, 181, 0.2) !important;
 }
 
-/* Current item styling - already "selected" */
+/* Current item base styling */
 .sidebar li#current {
-    transform: translateX(8px);
-    backdrop-filter: blur(15px);
-    border: 2px solid transparent;
+    transform: translateX(8px) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 2px solid transparent !important;
 }
 
 body.light-mode .sidebar li#current {
-    background: rgba(240, 98, 146, 0.3);
-    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.15);
+    background: rgba(240, 98, 146, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.15) !important;
 }
 
 body.dark-mode .sidebar li#current {
-    background: rgba(63, 81, 181, 0.4);
-    box-shadow: 0 4px 15px rgba(63, 81, 181, 0.25);
+    background: rgba(63, 81, 181, 0.4) !important;
+    box-shadow: 0 4px 15px rgba(63, 81, 181, 0.25) !important;
 }
 
-/* Current item hover - ONLY add border, keep everything else the same */
+/* Current item hover - ONLY border changes */
 body.light-mode .sidebar li#current:hover {
-    border: 2px solid #f06292;
+    border: 2px solid #f06292 !important;
+    /* Force all other properties to stay the same */
+    background: rgba(240, 98, 146, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.15) !important;
+    transform: translateX(8px) !important;
 }
 
 body.dark-mode .sidebar li#current:hover {
-    border: 2px solid #3f51b5;
+    border: 2px solid #3f51b5 !important;
+    /* Force all other properties to stay the same */
+    background: rgba(63, 81, 181, 0.4) !important;
+    box-shadow: 0 4px 15px rgba(63, 81, 181, 0.25) !important;
+    transform: translateX(8px) !important;
 }
 
+/* Icons */
 .sidebar i {
     margin-right: 12px;
     transition: transform 0.3s ease;
 }
 
-.sidebar li:hover i {
+/* Icon scaling ONLY for non-current items */
+.sidebar li:not(#current):hover i {
     transform: scale(1.1);
+}
+
+/* Current item icon - no scaling on hover */
+.sidebar li#current i {
+    transform: scale(1) !important;
+}
+
+.sidebar li#current:hover i {
+    transform: scale(1) !important;
 }
 
 .main{
