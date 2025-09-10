@@ -1,6 +1,7 @@
 const toggleButton = document.getElementById('theme-toggle');
 const taskbar = document.getElementById('taskbar');
 const toggleButtonIcon = document.createElement('span');
+const favicon = document.getElementById('favicon');
 toggleButtonIcon.id = 'theme-toggle-icon'; 
 toggleButton.appendChild(toggleButtonIcon);
 
@@ -8,6 +9,7 @@ toggleButton.appendChild(toggleButtonIcon);
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.body.classList.add(savedTheme + '-mode');
 toggleButtonIcon.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-earth-americas"></i>' : '<i class="fa-solid fa-cloud"></i>';
+favicon.href = savedTheme === 'dark' ? 'assets/favicon_dark.png' : 'assets/favicon_light.png';
 
 // Toggle theme on button click
 toggleButton.addEventListener('click', () => {
@@ -15,11 +17,13 @@ toggleButton.addEventListener('click', () => {
     taskbar.classList.replace('dark-mode', 'light-mode');
     document.body.classList.replace('dark-mode', 'light-mode');
     toggleButtonIcon.innerHTML = '<i class="fa-solid fa-cloud"></i>';
+    favicon.href = 'assets/favicon_light.png';
     localStorage.setItem('theme', 'light');
   } else {
     taskbar.classList.replace('light-mode', 'dark-mode');
     document.body.classList.replace('light-mode', 'dark-mode');
     toggleButtonIcon.innerHTML = '<i class="fa-solid fa-earth-americas"></i>';
+    favicon.href = 'assets/favicon_dark.png'
     localStorage.setItem('theme', 'dark');
   }
 });
