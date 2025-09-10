@@ -52,12 +52,60 @@ a.shortcut:visited {
     text-decoration: none;
     text-transform: lowercase;
 }
+/* Setup overlay and box themed for light-mode and dark-mode */
+body.light-mode .setup-overlay {
+  background: rgba(252, 228, 236, 0.51);
+}
 
+body.dark-mode .setup-overlay {
+  background: rgba(26, 34, 126, 0.499);
+}
+
+body.light-mode .setup-box {
+  background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  color: #ad1457;
+  box-shadow: 0 0 15px rgba(240, 98, 146, 0.15);
+  border: 2px solid #f48fb1;
+}
+
+body.dark-mode .setup-box {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  color: #e3f2fd;
+  box-shadow: 0 0 15px rgba(26, 35, 126, 0.25);
+  border: 2px solid #3949ab;
+}
+
+body.light-mode #username-input {
+  background: #fce4ec;
+  color: #ad1457;
+  border: 1px solid #f8bbd0;
+}
+
+body.dark-mode #username-input {
+  background: #283593;
+  color: #e3f2fd;
+  border: 1px solid #3949ab;
+}
+
+body.light-mode #save-username {
+  background: linear-gradient(90deg, #f8bbd0 0%, #fce4ec 100%);
+  color: #ad1457;
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 2px 6px rgba(240, 98, 146, 0.08);
+}
+
+body.dark-mode #save-username {
+  background: linear-gradient(90deg, #283593 0%, #1a237e 100%);
+  color: #e3f2fd;
+  border: 1px solid #3949ab;
+  box-shadow: 0 2px 6px rgba(26, 35, 126, 0.15);
+}
+
+/* Keep original layout and spacing */
 .setup-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,11 +113,9 @@ a.shortcut:visited {
 }
 
 .setup-box {
-  background: white;
   padding: 20px 30px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 .setup-box h2 {
@@ -81,6 +127,8 @@ a.shortcut:visited {
   font-size: 16px;
   margin-top: 10px;
   width: 80%;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
 
 #save-username {
@@ -88,4 +136,6 @@ a.shortcut:visited {
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
