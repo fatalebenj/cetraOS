@@ -3,6 +3,8 @@
     src: url("../assets/OPTIEngeEtienne.otf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 #taskbar {
     position: fixed;
     bottom: 0;
@@ -50,7 +52,7 @@ body.dark-mode #taskbar {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 15px;
     position: relative;
     overflow: hidden;
 }
@@ -149,5 +151,9 @@ body.dark-mode span#greeting {
 }
 
 #clock {
-    margin-right: 10px;
+    margin-right: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
