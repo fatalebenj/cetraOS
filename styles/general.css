@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "Orbitron";
-    src: url(../assets/Orbitron/Orbitron-SemiBold.ttf);
+    src: url('../assets/Orbitron/Orbitron-SemiBold.ttf');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -136,25 +136,6 @@ body.light-mode span#name {
 
 body.dark-mode span#name {
     color: #e8eaf6;
-}
-
-span#greeting {
-    font-size: 15px;
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    margin-top: auto;
-    margin-left: 5px;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
-}
-
-body.light-mode span#greeting {
-    color: #880e4f;
-}
-
-body.dark-mode span#greeting {
-    color: #c5cae9;
 }
 
 #clock {

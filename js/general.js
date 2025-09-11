@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showGreeting(name) {
     if (greetEl) {
-      greetEl.textContent = `Hello, ${name}!`;
+      greetEl.textContent = `hello, ${name}!`;
     }
   }
 });
