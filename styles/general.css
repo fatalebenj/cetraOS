@@ -3,8 +3,12 @@
     src: url("../assets/OPTIEngeEtienne.otf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: "Orbitron";
+    src: url(../assets/Orbitron/Orbitron-SemiBold.ttf);
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 #taskbar {
     position: fixed;
     bottom: 0;
@@ -136,7 +140,10 @@ body.dark-mode span#name {
 
 span#greeting {
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     margin-top: auto;
     margin-left: 5px;
     text-shadow: 0 1px 5px rgba(0,0,0,0.1);
