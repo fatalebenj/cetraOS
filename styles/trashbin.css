@@ -1,6 +1,6 @@
-fileexplorer {  /* wrapper for sidebar + main */
+fileexplorer {  
     display: flex;
-    flex: 1; /* take all space except the taskbar */
+    flex: 1;
     overflow: hidden;
 }
 
@@ -40,7 +40,7 @@ body.light-mode .sidebar {
 
 body.dark-mode .sidebar {
     background: linear-gradient(180deg, 
-        rgba(38, 43, 93, 0.95) 0%, 
+        rgba(23, 27, 60, 0.95) 0%, 
         rgb(33, 35, 57) 100%);
     border-right-color: #3f51b5;
     color: #e8eaf6;
@@ -232,21 +232,30 @@ body {
 }
 
 body.light-mode .toolbar button {
-    background: linear-gradient(90deg, #f8f8f8 0%, #e8e8e8 100%);
-    color: #222;
+    background: linear-gradient(180deg, 
+        rgba(226, 116, 153, 0.95) 0%, 
+        rgba(218, 102, 122, 0.9) 100%);
+    color: #fff;
 }
 
 body.dark-mode .toolbar button {
-    background: linear-gradient(90deg, #444 0%, #535353 100%);
+    background: linear-gradient(90deg, #6289de 0%, #3d66ce 100%);
     color: #fff;
 }
 
 .toolbar button:hover, .toolbar button:focus {
-    background: #4e9af1;
     color: #fff;
-    box-shadow: 0 4px 12px rgba(78,154,241,0.15);
     outline: none;
 }
+
+body.light-mode .toolbar button:hover, .toolbar button:focus {
+    box-shadow: 0 4px 12px rgba(252, 5, 22, 0.758);
+}
+
+body.dark-mode .toolbar button:hover, .toolbar button:focus {
+    box-shadow: 0 4px 12px rgba(29, 180, 240, 0.623);
+}
+
 
 .toolbar button:last-child {
     margin-right: 0;
