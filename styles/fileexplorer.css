@@ -166,6 +166,12 @@ body.light-mode .main{
     display: flex;
 }
 
+/* Remove default link styling in file-list */
+.file-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .file-item {
     display: flex;
     flex-direction: column;
