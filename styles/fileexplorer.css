@@ -51,6 +51,12 @@ body.dark-mode .sidebar {
     padding: 0;
 }
 
+/* Remove default link styling */
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .sidebar li {
     margin: 8px 5px;
     padding: 5px;
