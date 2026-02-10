@@ -166,7 +166,7 @@ body.light-mode .main{
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 120px;
+    width: 150px;
     height: 150px;
     border: 1px solid #ddd;
     margin: 5px 0px 5px 5px;
@@ -180,12 +180,12 @@ body.light-mode .main{
 }
 
 .file-item i {
-    font-size: 80px;
-    margin-bottom: 10px;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .file-item span {
-    font-size: 12px;
+    font-size: 16px;
     word-wrap: break-word;
     max-width: 100%;
 }

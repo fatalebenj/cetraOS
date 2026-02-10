@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>documents *** cetraOS</title> 
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/fileexplorer.css">
+    <link rel="shortcut icon" href="assets/favicon_dark.png" type="image/x-icon" id="favicon">
+    <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
+</head>
+<body onload="startTime()">
+    <div id="screen">
+        <div id="file-explorer">
+            <div class="sidebar">
+                <ul>
+                    <li id="current"><i class="fas fa-folder"></i> Documents</li>
+                    <li><i class="fas fa-folder"></i><a href="pictures.html"> Pictures</a></li>
+                    <li><i class="fas fa-folder"></i><a href="music.html"> Music</a></li>
+                    <li><i class="fas fa-folder"></i><a href="videos.html"> Videos</a></li>
+                    <li><i class="fas fa-trash"></i><a href="trashbin.html">Trash</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="toolbar">
+                    <button><i class="fas fa-arrow-left"></i></button>
+                    <button><i class="fas fa-arrow-right"></i></button>
+                    <button><i class="fas fa-sync"></i></button>
+                    <span>Current Folder: Documents</span>
+                </div>
+                <div class="file-list">
+                    <div class="file-item">
+                        <i class="fa-regular fa-file"></i>
+                        <span>aeriths_music_sheet.pdf</span>
+                    </div>
+                    <div class="file-item">
+                        <i class="fa-regular fa-file"></i>
+                        <span>moms_receipt.jpg</span>
+                    </div>
+                    <div class="file-item">
+                        <i class="fa-regular fa-file"></i>
+                        <span>trace_of_two_pasts.epub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="taskbar">
+            <span id="name">cetraOS</span>
+            <button id="theme-toggle"></button>
+            <span id="clock"></span>
+            <a href="index.html"><div id="desktopbutton"></div></a>
+        </div>
+    </div>
+    <script src="js/general.js"></script>
+</body>
+</html>
