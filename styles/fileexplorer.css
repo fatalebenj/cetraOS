@@ -184,7 +184,6 @@ body.light-mode .main{
     border-radius: 10px;
     transition: background-color 0.2s;
     text-align: center;
-    cursor: zoom-in;
 }
 body.light-mode .file-item {
     border: 2px solid  #f06292;
