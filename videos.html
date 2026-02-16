@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>home *** cetraOS</title> 
+    <title>videos *** cetraOS</title> 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/fileexplorer.css">
+    <link rel="stylesheet" href="styles/viewer.css">
     <link rel="shortcut icon" href="assets/favicon_dark.png" type="image/x-icon" id="favicon">
     <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
 </head>
@@ -28,14 +29,23 @@
                     <button><i class="fas fa-sync"></i></button>
                     <span>Current Folder: Home/<b>Videos</b></span>
                 </div>
-                <div class="file-list">
-                    <div class="file-item">
-                            <i class="fa-solid fa-film"></i>
-                            <span>advent_children_<br>ending.mp4</span>
+                <div class="content-area">
+                    <div class="file-list">
+                        <div class="file-item">
+                                <i class="fa-solid fa-film"></i>
+                                <span>advent_children_<br>ending.mp4</span>
+                        </div>
+                        <div class="file-item">
+                                <i class="fa-solid fa-film"></i>
+                                <span>gondola_date.mp4</span>
+                        </div>
                     </div>
-                    <div class="file-item">
-                            <i class="fa-solid fa-film"></i>
-                            <span>gondola_date.mp4</span>
+                    <div class="viewer">
+                            <div id="view-space">
+                                <span>Click on a video to watch it</span>
+                            </div>
+                            <span id="file-name"></span>
+                            <span id="file-size"></span>
                     </div>
                 </div>
             </div>

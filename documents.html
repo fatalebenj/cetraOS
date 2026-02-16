@@ -5,6 +5,7 @@
     <title>documents *** cetraOS</title> 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/fileexplorer.css">
+    <link rel="stylesheet" href="styles/viewer.css">
     <link rel="shortcut icon" href="assets/favicon_dark.png" type="image/x-icon" id="favicon">
     <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
 </head>
@@ -28,14 +29,23 @@
                     <button><i class="fas fa-sync"></i></button>
                     <span>Current Folder: Home/<b>Documents</b></span>
                 </div>
-                <div class="file-list">
-                    <div class="file-item">
-                        <i class="fa-regular fa-file"></i>
-                        <span>aeriths_music_<br>sheet.pdf</span>
+                <div class="content-area">
+                    <div class="file-list">
+                        <div class="file-item">
+                            <i class="fa-regular fa-file"></i>
+                            <span>aeriths_music_<br>sheet.pdf</span>
+                        </div>
+                        <div class="file-item">
+                            <i class="fa-regular fa-file"></i>
+                            <span>moms_receipt.jpg</span>
+                        </div>
                     </div>
-                    <div class="file-item">
-                        <i class="fa-regular fa-file"></i>
-                        <span>moms_receipt.jpg</span>
+                    <div class="viewer">
+                        <div id="view-space">
+                            <span>Click on a document to read it</span>
+                        </div>
+                        <span id="file-name"></span>
+                        <span id="file-size"></span>
                     </div>
                 </div>
             </div>

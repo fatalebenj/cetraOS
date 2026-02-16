@@ -5,7 +5,7 @@
     <title>home *** cetraOS</title> 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/fileexplorer.css">
-    <link rel="stylesheet" href="styles/player.css">
+    <link rel="stylesheet" href="styles/viewer.css">
     <link rel="shortcut icon" href="assets/favicon_dark.png" type="image/x-icon" id="favicon">
     <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
 </head>
@@ -29,22 +29,24 @@
                     <button><i class="fas fa-sync"></i></button>
                     <span>Current Folder: Home/<b>Pictures</b></span>
                 </div>
-                <div class="file-list">
-                    <div class="file-item">
+                <div class="content-area">
+                    <div class="file-list">
+                        <div class="file-item">
                             <i class="fa-solid fa-image"></i>
                             <span>our_photo.jpg</span>
-                    </div>
-                    <div class="file-item">
+                        </div>
+                        <div class="file-item">
                             <i class="fa-solid fa-image"></i>
                             <span>seventh_heaven_<br>logo.png</span>
+                        </div>
                     </div>
-                </div>
-                <div class="viewer">
-                    <div id="view-space">
-                        <span>Click on a picture to view it</span>
+                    <div class="viewer">
+                        <div id="view-space">
+                            <span>Click on a picture to view it</span>
+                        </div>
+                        <span id="file-name"></span>
+                        <span id="file-size"></span>
                     </div>
-                    <span id="picture-name"></span>
-                    <span id="picture-size"></span>
                 </div>
             </div>
         </div>
@@ -56,5 +58,6 @@
         </div>
     </div>
     <script src="js/general.js"></script>
+    <script src="js/pictures.js"></script>
 </body>
 </html>

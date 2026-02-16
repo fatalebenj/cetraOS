@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>home *** cetraOS</title> 
+    <title>music *** cetraOS</title> 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/fileexplorer.css">
+    <link rel="stylesheet" href="styles/player.css">
     <link rel="shortcut icon" href="assets/favicon_dark.png" type="image/x-icon" id="favicon">
     <script src="https://kit.fontawesome.com/ba8093dbc1.js" crossorigin="anonymous"></script>
 </head>
@@ -28,31 +29,17 @@
                     <button><i class="fas fa-sync"></i></button>
                     <span>Current Folder: Home/<b>Music</b></span>
                 </div>
-                <div class="file-list">
-                    <a href="documents.html">
-                        <div class="file-item">
-                            <i class="fa-solid fa-file-lines"></i>
-                            <span>Documents</span>
+                <div class="content-area">
+                <div class="song-list">
+                    
+                </div>
+                <div class="viewer">
+                        <div id="view-space">
+                            <span>Click on a song to play it</span>
                         </div>
-                    </a>
-                    <a href="pictures.html">
-                        <div class="file-item">
-                            <i class="fa-solid fa-file-image"></i>
-                            <span>Pictures</span>
-                        </div>
-                    </a>
-                    <a href="music.html">
-                        <div class="file-item">
-                            <i class="fa-solid fa-music"></i>
-                            <span>Music</span>
-                        </div>
-                    </a>
-                    <a href="videos.html">
-                        <div class="file-item">
-                            <i class="fa-solid fa-video"></i>
-                            <span>Videos</span>
-                        </div>
-                    </a>
+                        <span id="picture-name"></span>
+                        <span id="picture-size"></span>
+                    </div>
                 </div>
             </div>
         </div>

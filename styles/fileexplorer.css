@@ -139,10 +139,36 @@ body.dark-mode .sidebar li#current:hover {
     transform: scale(1) !important;
 }
 
-.main{
+.main {
     flex: 1;
-    padding: 10px;
+    padding: 0 0 10px 10px; /* remove top padding so viewer can reach top */
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    margin-top: 0; /* align content flush to top */
+    overflow: hidden;
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 350px; /* Fixed width */
+    align-content: flex-start;
+    overflow-y: auto;
+    gap: 5px;
 }
 
 body.dark-mode .main{
@@ -159,11 +185,9 @@ body.light-mode .main{
     display: flex;
     align-items: center;
     margin-bottom: 0px;
-}
-
-.file-list {
-    margin-top: 10px;
-    display: flex;
+    height: 40px; /* shorter toolbar */
+    width: 500px;
+    padding: 4px 8px;
 }
 
 /* Remove default link styling in file-list */
@@ -244,7 +268,7 @@ body {
 
 .toolbar button {
     margin-right: 8px;
-    padding: 6px 14px;
+    padding: 4px 10px; /* reduced padding to shorten toolbar */
     border: none;
     border-radius: 5px;
     font-size: 15px;
